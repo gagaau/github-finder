@@ -1,73 +1,48 @@
-# React + TypeScript + Vite
+PROJETO: GitHub Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação de React + TypeScript para buscar perfis e repositórios do GitHub
+usando uma API pública.
 
-Currently, two official plugins are available:
+>>> Funcionalidades:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Buscar usuários pelo username.
 
-## React Compiler
+- Exibir avatar, nome, bio, localização e estatísticas do perfil.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Exibir alguns repositórios do usuário.
 
-## Expanding the ESLint configuration
+- Mostrar linguagem, estrelas e link dos repositórios.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Loading durante a busca.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Mensagem de erro quando o usuário não é encontrado.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- Tema claro e escuro.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Última busca salva no localStorage.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+>>> Tecnologias usadas:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React.
+- TypeScript.
+- CSS.
+- GitHub API.
+- localStorage.
+- Vite.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+>>> Como rodar o projeto:
+
+- npm install
+- npm run dev
+
+>>> Status:
+
+- Projeto finalizado para portfólio.
+
+>>> Deploy:
+
+- ...
+
+>>>>>> Autor:
+
+- Feito por Gabriel Henrique.
