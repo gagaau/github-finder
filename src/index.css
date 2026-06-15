@@ -1,0 +1,321 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+/* Tema claro e escuro */
+body.light {
+  background: #eef2f7;
+  color: #1f2937;
+}
+
+body.dark {
+  background: #111827;
+  color: #f3f4f6;
+}
+
+/* Container principal */
+.app {
+  width: min(1050px, 92%);
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+/* Área do Header */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.app-label {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.app-header h1 {
+  margin: 0 0 10px;
+  font-size: 2.4rem;
+}
+
+.app-header p {
+  margin-top: 0;
+  max-width: 650px;
+  line-height: 1.5;
+}
+
+/* Botão de tema */
+.theme-toggle {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #2563eb;
+  color: white;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  background: #1d4ed8;
+}
+
+/* Formulário de busca */
+.search-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  flex: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 12px 14px;
+  outline: none;
+}
+
+.search-form input:focus {
+  border-color: #2563eb;
+}
+
+.search-form button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+  font-weight: bold;
+  background: #16a34a;
+  color: white;
+}
+
+.search-form button:hover {
+  background: #15803d;
+}
+
+.search-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Cards principais */
+.status-card,
+.user-card,
+.repo-section {
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+body.light .status-card,
+body.light .user-card,
+body.light .repo-section {
+  background: white;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+body.dark .status-card,
+body.dark .user-card,
+body.dark .repo-section {
+  background: #1f2937;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Mensagens de status */
+.status-card p {
+  margin: 0;
+}
+
+.status-card.error {
+  border: 1px solid #ef4444;
+  color: #ef4444;
+}
+
+/* Card do usuário */
+.user-main-info {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.user-main-info img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid #2563eb;
+}
+
+.user-main-info h2 {
+  margin: 0 0 4px;
+}
+
+.username {
+  margin: 0 0 12px;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+.bio,
+.location {
+  line-height: 1.5;
+}
+
+.user-main-info a,
+.repo-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #2563eb;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.user-main-info a:hover,
+.repo-card a:hover {
+  text-decoration: underline;
+}
+
+/* Estatísticas do usuário */
+.user-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.user-stats div {
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+body.light .user-stats div {
+  background: #f1f5f9;
+}
+
+body.dark .user-stats div {
+  background: #111827;
+}
+
+.user-stats strong {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.user-stats span {
+  font-size: 0.9rem;
+}
+
+/* Área dos repositórios */
+.repo-section h2 {
+  margin-top: 0;
+}
+
+.repo-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Card do repositório */
+.repo-card {
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 190px;
+}
+
+body.light .repo-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+body.dark .repo-card {
+  background: #111827;
+  border: 1px solid #374151;
+}
+
+.repo-card h3 {
+  margin: 0 0 8px;
+}
+
+.repo-card p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Informações do repositório */
+.repo-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.repo-info span {
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+body.light .repo-info span {
+  background: #e0f2fe;
+}
+
+body.dark .repo-info span {
+  background: #1e3a8a;
+}
+
+/* Mensagem de lista vazia */
+.empty-message {
+  margin-bottom: 0;
+}
+
+/* Responsividade */
+@media (max-width: 720px) {
+  .app-header {
+    flex-direction: column;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-form button {
+    width: 100%;
+  }
+
+  .user-main-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .user-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .repo-list {
+    grid-template-columns: 1fr;
+  }
+}
