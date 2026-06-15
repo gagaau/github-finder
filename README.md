@@ -43,6 +43,10 @@ usando uma API pública.
 
 https://github-finder-chi-hazel.vercel.app/
 
+>>> Screenshot:
+
+![Tela do GitHub Finder](./screenshots/github-finder.png)
+
 >>>>>> Autor:
 
 - Feito por Gabriel Henrique.
