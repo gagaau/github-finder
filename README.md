@@ -41,7 +41,7 @@ usando uma API pública.
 
 >>> Deploy:
 
-- ...
+https://github-finder-chi-hazel.vercel.app/
 
 >>>>>> Autor:
 
