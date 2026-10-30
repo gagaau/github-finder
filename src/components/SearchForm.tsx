@@ -1,3 +1,5 @@
+import type { FormEvent } from "react";
+
 type SearchFormProps = {
   username: string;
   isLoading: boolean;
@@ -11,22 +13,32 @@ function SearchForm({
   onUsernameChange,
   onSearch,
 }: SearchFormProps) {
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     onSearch();
   }
 
   return (
-    <form className="search-form" onSubmit={handleSubmit}>
+    <form
+      className="search-form"
+      onSubmit={handleSubmit}
+      role="search"
+    >
       <input
-        type="text"
+        id="github-username"
+        name="username"
+        type="search"
+        aria-label="Nome de usuário do GitHub"
         placeholder="Digite um usuário do GitHub"
+        autoComplete="off"
+        autoCapitalize="none"
+        spellCheck={false}
         value={username}
         onChange={(event) => onUsernameChange(event.target.value)}
       />
 
       <button type="submit" disabled={isLoading}>
-        {isLoading ? "Buscando..." : "Buscar"}
+        {isLoading ? "Buscando..." : "Buscar usuário"}
       </button>
     </form>
   );

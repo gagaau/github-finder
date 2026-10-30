@@ -1,52 +1,79 @@
-PROJETO: GitHub Finder
+# GitHub Finder
 
-Aplicação de React + TypeScript para buscar perfis e repositórios do GitHub
-usando uma API pública.
+Aplicação web desenvolvida com **React e TypeScript** para pesquisar perfis públicos do GitHub e explorar seus repositórios.
 
->>> Funcionalidades:
+O projeto utiliza a API REST do GitHub para consultar informações em tempo real, oferecendo filtros, ordenação, paginação e uma interface responsiva com suporte aos temas claro e escuro.
 
-- Buscar usuários pelo username.
+**[Acessar aplicação](https://github-finder-chi-hazel.vercel.app/)**
 
-- Exibir avatar, nome, bio, localização e estatísticas do perfil.
+## Funcionalidades
 
-- Exibir alguns repositórios do usuário.
+- Pesquisa de usuários pelo nome de usuário do GitHub.
+- Visualização de avatar, nome, biografia, empresa, localização e site pessoal.
+- Estatísticas de seguidores, contas seguidas e repositórios públicos.
+- Exibição de até 100 repositórios públicos por pesquisa.
+- Pesquisa de repositórios por nome ou descrição.
+- Filtro por linguagem de programação.
+- Ordenação por data de atualização, estrelas ou nome.
+- Identificação e opção para ocultar repositórios que são forks.
+- Paginação dos resultados.
+- Formatação de datas e números.
+- Tema claro e escuro, com preferência salva no navegador.
+- Armazenamento do último usuário pesquisado.
+- Indicadores de carregamento e mensagens de erro.
+- Layout responsivo para computadores, tablets e celulares.
 
-- Mostrar linguagem, estrelas e link dos repositórios.
+## Tecnologias utilizadas
 
-- Loading durante a busca.
+- **React:** construção da interface utilizando componentes e hooks.
+- **TypeScript:** tipagem dos dados, propriedades e funções.
+- **Vite:** ambiente de desenvolvimento e build.
+- **CSS:** estilização, temas, Flexbox, Grid e responsividade.
+- **GitHub REST API:** consulta de perfis e repositórios públicos.
+- **LocalStorage:** persistência das preferências do usuário.
 
-- Mensagem de erro quando o usuário não é encontrado.
+## Como executar
 
-- Tema claro e escuro.
+É necessário ter Node.js e npm instalados.
 
-- Última busca salva no localStorage.
+**1. Clone o repositório:**
 
->>> Tecnologias usadas:
+`git clone https://github.com/gagaau/github-finder.git `
 
-- React.
-- TypeScript.
-- CSS.
-- GitHub API.
-- localStorage.
-- Vite.
+**2. Entre na pasta:**
 
->>> Como rodar o projeto:
+`cd github-finder`
 
-- npm install
-- npm run dev
+**3. Instale as dependências:**
 
->>> Status:
+`npm install`
 
-- Projeto finalizado para portfólio.
+**4. Inicie o servidor de desenvolvimento:**
 
->>> Deploy:
+`npm run dev`
 
-https://github-finder-chi-hazel.vercel.app/
+Acesse o endereço local exibido no terminal.
 
->>> Screenshot:
+### Outros comandos
 
-![Tela do GitHub Finder](./screenshots/github-finder.png)
+- `npm run build` — gera a versão de produção.
+- `npm run preview` — permite visualizar o build localmente.
+- `npm run lint` — executa a análise estática do código.
 
->>>>>> Autor:
+## Observações
 
-- Feito por Gabriel Henrique.
+O projeto utiliza os endpoints públicos da API do GitHub, sem exigir login.
+
+As consultas estão sujeitas aos limites de requisições da API. Os filtros e a paginação operam sobre os repositórios carregados, limitados aos 100 mais recentemente atualizados por pesquisa.
+
+Repositórios privados não são exibidos.
+
+## Captura de tela
+
+![Interface do GitHub Finder](./screenshots/github-finder.png)
+
+## Autor
+
+Desenvolvido por **Gabriel Henrique**.
+
+Projeto criado para prática de desenvolvimento frontend e composição do portfólio profissional.

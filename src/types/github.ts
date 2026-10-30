@@ -4,6 +4,9 @@ export type GitHubUser = {
   login: string;
   bio: string | null;
   location: string | null;
+  company: string | null;
+  blog: string;
+  created_at: string;
   followers: number;
   following: number;
   public_repos: number;
@@ -17,4 +20,6 @@ export type GitHubRepo = {
   language: string | null;
   stargazers_count: number;
   html_url: string;
+  updated_at: string;
+  fork: boolean;
 };
